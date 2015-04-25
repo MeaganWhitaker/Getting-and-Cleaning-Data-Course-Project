@@ -1,7 +1,8 @@
 # the purpose of this r file is to extract and merge data (from 4 different sets)
 # from this merged data, this file will extract specific data values for the mean
 # and standard deviation. Then this file will show the averages of that data in a
-# tidy data set.
+# tidy data set. I discussed with a classmate the steps needed to solve this problem.
+# He gave me specific help on certain steps towards the end.
 
 setwd("C:/Users/C16Meagan.Whitaker/Documents/Spring 2015/Math 378/getdata-projectfiles-UCI HAR Dataset/")
 
@@ -48,7 +49,7 @@ colnames(data)[1]<-"Subjects"
 colnames(data)[2]<-"Activities"
 
 #this cycles through everyone and activity to add it the tidyframe
-#only finds the mean for specific subject/data point
+#only finds the mean for specific subject/data point. My classmate helped me figure out the code for this part.
 for(i in 1:30){
   for(j in 1:6){
     false<-subset(data,Subjects==subjects[i]&Activities==activity_labels[j,1])
@@ -62,7 +63,7 @@ for(i in 1:30){
 colnames(tidydata)[1]="Subject"
 colnames(tidydata)[2]="Activity"
 
-#makes tidy names easier to read/replace variable names
+#makes tidy names easier to read/replace variable names. My classmate assisted me in this coding as well.
 names(tidydata)<-gsub("At","Time",names(tidydata))
 names(tidydata)<-gsub("Acc","Accelerometer",names(tidydata))
 names(tidydata)<-gsub("^f","Frequency",names(tidydata))
