@@ -1,1 +1,25 @@
+This is the code book for the Getting and Cleaning Data Course Project.
 
+Starting from the top:
+
+x_test, y_test, x_train, and y_train are the data read in from the provided data set separated.
+combined_x and combined_y are the row bound combined data of x_train, x_test and the same for the y versions.
+combined is the column bound of combined_x and combined_y.
+col_names stores the coloumn names from the data set.
+colnames(combined) is the transpose of the second column of col_names.
+sub_test, sub_train are the read in values of subject_test in the data set.
+sub_total is the sub_test and sub_train bound together.
+activity_labels are the read in activity labels from the data set.
+std_row is the standard deviation of read in data values for colnames(combined).
+mean_row is teh mean of the read in data values for colnames(combined).
+meanFreq_cols is the count of the frequency that means occur.
+data is the new data set with all the above calculations.
+tidydata is there to set up the matrix for our tidy data set.
+subjects are the values 1 through 30.
+we assign the two coloumn names in the data to be subjects and activities.
+false is the subsetted data wanted for this analysis.
+vector is the mean of this data.
+new_vector is the new vector with the above calculations.
+tidydata is where this is stored.
+The names of the tidydata is replaced with the new names.
+it is wrote to the TidyDataWAverages.txt file.
